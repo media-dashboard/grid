@@ -9,6 +9,15 @@ var knex = require('knex')({
     charset  : 'utf8'
   }
 });
-var bookshelf = require('bookshelf')(knex);
+var db = require('bookshelf')(knex);
 
-module.exports = bookshelf;
+// db.knex.schema.hasTable('grid').then(function(exists){
+//   if(!exists){
+//     db.knex.schema.createTable('gird', function(grid){
+//       link.increments('id').primary();
+//       link.specificType('geo', 'geom');
+//     });
+//   }
+// });
+
+module.exports = db;

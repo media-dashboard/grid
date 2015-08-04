@@ -1,0 +1,34 @@
+{
+  "name": "grid",
+  "version": "0.1.0",
+  "description": "grid geographic regions and record each cell's containing administrative regions",
+  "main": "grid.js",
+  "dependencies": {
+    "bookshelf": "^0.8.1",
+    "knex": "^0.8.6",
+    "pg": "^4.4.1",
+    "ramda": "^0.17.1",
+    "topojson": "^1.6.19",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameslaneconkling/2015-06-mvp.git"
+  },
+  "keywords": [
+    "geojson",
+    "grid",
+    "spatial",
+    "density"
+  ],
+  "author": "James Conkling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameslaneconkling/2015-06-mvp/issues"
+  },
+  "homepage": "https://github.com/jameslaneconkling/2015-06-mvp#readme"
+}
