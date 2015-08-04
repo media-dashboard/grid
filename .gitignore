@@ -1,3 +1,6 @@
+# ignore gadm geodata (it's ~1 GB)
+data/
+
 ### node etc ###
 
 # Logs
