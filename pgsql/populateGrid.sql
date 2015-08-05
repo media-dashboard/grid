@@ -14,3 +14,5 @@ INSERT INTO grid
     ST_SetSRID(geom, 4326) as geom
      --ST_CreateFishnet(nrow, ncol, xstep, ystep [, xmin, ymin]) 
   FROM ST_CreateFishnet((:ymax - :ymin)/:cellwidth, (:xmax - :xmin)/:cellwidth, :cellwidth, :cellwidth, :xmin, :ymin);
+
+CREATE INDEX grid_gix on grid USING GIST (geom);
