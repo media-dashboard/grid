@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+<script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<div id='map'></div>
+<style>
+  svg path{
+    stroke-width: 1;
+    fill: orange;
+    stroke: orange;
+  }
+</style>
+<script>
+
+function filter(admin){
+  grid.filter
+}
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiY3Jvd2Rjb3ZlciIsImEiOiI3akYtNERRIn0.uwBAdtR6Zk60Bp3vTKj-kg';
+var map = L.mapbox.map('map', 'james-lane-conkling.5630f970')
+    .setView([40, 25.50], 5);
+
+var grid = omnivore.topojson('../data/world_admin_grid.topojson');
+
+grid.on('ready', function(){
+  this.eachLayer(function(layer){
+      layer.bindPopup(layer.feature.properties.admin);
+    })
+    .addTo(map);
+});
+    
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "gird",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jameslaneconkling/2015-06-mvp",
+  "authors": [
+    "James Conkling <james.lane.conkling@gmail.com>"
+  ],
+  "description": "oh my gird",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
